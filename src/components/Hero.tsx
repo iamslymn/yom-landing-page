@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Download, Smartphone, Truck, Headphones, MapPin } from "lucide-react";
+import { Download, Smartphone, Truck, Headphones, Bell } from "lucide-react";
 import twinkl1 from "@/assets/twinkl1.png";
 import twinkl2 from "@/assets/twinkl2.png";
 
@@ -139,8 +139,8 @@ const Hero = () => {
                 <span className="text-sm">24/7 müştəri xidməti</span>
               </div>
               <div className="flex items-center gap-2">
-                <MapPin className="h-5 w-5 text-secondary" />
-                <span className="text-sm">Canlı sifariş statusu</span>
+                <Bell className="h-5 w-5 text-secondary" />
+                <span className="text-sm">Canlı statuslar</span>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">

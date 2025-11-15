@@ -18,10 +18,10 @@ const Download = () => {
             <img src={yomIconWhite} alt="Yom Icon" className="h-20 w-20" />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">
-            Yom-u elə indi telefonunuza yükləyin
+            Təmiz paltarlarınız bir toxunuş qədər uzaqda
           </h2>
           <p className="text-lg md:text-xl mb-12 text-primary-foreground/90 animate-fade-in">
-            Dəqiqələr içində yükləyin və peşəkar camaşırxana xidmətimizin rahatlığından sürətli istifadə edin.
+            Mobil tətbiqimizi elə indi yükləyin və xidmətimizin rahatlığından dəqiqələr içində istifadə edin.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -74,30 +74,10 @@ const Download = () => {
             </div>
           </div>
 
-          <div className="mt-12 flex flex-wrap justify-center gap-8 text-primary-foreground/80 text-sm animate-fade-in">
-            <div className="flex items-center gap-2">
-              <CheckIcon />
-              <span>Pulsuz yüklənir</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckIcon />
-              <span>İstifadəsi asan</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckIcon />
-              <span>Təhlükəsiz ödənişlər</span>
-            </div>
-          </div>
         </div>
       </div>
     </section>
   );
 };
-
-const CheckIcon = () => (
-  <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-  </svg>
-);
 
 export default Download;

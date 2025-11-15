@@ -1,15 +1,5 @@
-import { CheckCircle2 } from "lucide-react";
 import yomIconBlue from "@/assets/yom-icon-blue.svg";
 import vanImage from "@/assets/van.png";
-
-const features = [
-  "Asan mobil tətbiq sifarişi",
-  "Real vaxt rejimində sifariş izləmə",
-  "Peşəkar keyfiyyətli xidmət",
-  "Ekoloji təmizləmə məhsulları",
-  "Çevik planlaşdırma",
-  "Təhlükəsiz ödəniş variantları",
-];
 
 const About = () => {
   return (
@@ -23,28 +13,9 @@ const About = () => {
                 Yom Haqqında
               </h2>
             </div>
-            <p className="text-lg text-muted-foreground mb-6">
-              Yom peşəkar təmizləmə xidmətlərini birbaşa qapınıza gətirərək camaşırxana sənayesində 
-              inqilab edir. Mobil tətbiqimiz götürmələri planlaşdırmağı, sifarişinizi izləməyi və 
-              evinizdən çıxmadan təmiz paltarlardan həzz almağı inanılmaz dərəcədə asanlaşdırır.
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Yom ölkəmizdə mobil tətbiqi vasitəsilə istifadəçilərə camaşırxana xidmətlərini təklif ilk platformadır. Məqsədimiz, camaşırxana işlərini asanlaşdırmaqla insanlara vaxtlarını daha səmərəli istifadə etmək imkanı yaratmaqdır. Çünki camaşır işləri bir həftədə 3 saatdan çox vaxtımızı alır və bir çox hallarda sıxıcı bir proses ola bilir. İnanırıq ki bu yolda ən keyfiyyətli çatdırılma və təmizləmə xidmətləri təklif etmək və insanlara bunu ən rahat şəkildə əlçatan etmək bu hədəfimizə gedən əsas yoldur.
             </p>
-            <p className="text-lg text-muted-foreground mb-8">
-              Ən yüksək keyfiyyətli xidməti təmin etmək və yerli biznesləri dəstəkləmək üçün etibarlı 
-              yerli camaşırxanalar və quru təmizləmə şirkətləri ilə əməkdaşlıq edirik. Gündəlik 
-              camaşırxana olsun, xüsusi paltar qayğısı olsun, Yom sizə xidmət edir.
-            </p>
-            <div className="grid grid-cols-2 gap-4">
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="flex items-start gap-2 animate-slide-up"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span className="text-foreground">{feature}</span>
-                </div>
-              ))}
-            </div>
           </div>
 
           <div className="relative animate-slide-up">
