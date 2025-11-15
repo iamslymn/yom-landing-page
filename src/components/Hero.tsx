@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Download, Smartphone, Truck, Headphones, MapPin } from "lucide-react";
-import vanImage from "@/assets/van.png";
 import twinkl1 from "@/assets/twinkl1.png";
 import twinkl2 from "@/assets/twinkl2.png";
 
@@ -13,7 +12,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center bg-gradient-hero overflow-hidden">
+    <section className="relative min-h-screen flex items-start bg-gradient-hero overflow-hidden pt-20">
       {/* Decorative Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-64 h-64 bg-primary-foreground rounded-full blur-3xl animate-float"></div>
@@ -119,7 +118,7 @@ const Hero = () => {
         />
       </div>
 
-      <div className="container mx-auto px-4 pt-24 pb-12 relative z-10">
+      <div className="container mx-auto px-4 pt-8 pb-12 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="text-primary-foreground animate-fade-in">
@@ -177,14 +176,18 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Hero Image */}
-          <div className="relative animate-slide-in-left">
-            <div className="relative scale-110">
-              <img
-                src={vanImage}
-                alt="YOM çatdırılma vanı"
-                className="w-full h-auto object-contain"
-              />
+          {/* Hero Spline Animation */}
+          <div className="relative animate-slide-in-left hidden lg:block">
+             <div className="relative w-[700px] h-[700px] bg-transparent mx-auto">
+              <iframe
+                src="https://my.spline.design/animatedmockupiphone14pro-86XT7O8vVhSY8E6YOQ0GTEvU/"
+                frameBorder="0"
+                width="700"
+                height="700"
+                className="w-full h-full bg-transparent"
+                style={{ backgroundColor: 'transparent' }}
+                title="YOM Mobile App Preview"
+              ></iframe>
             </div>
           </div>
         </div>

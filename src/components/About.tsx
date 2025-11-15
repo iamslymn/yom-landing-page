@@ -1,5 +1,6 @@
 import { CheckCircle2 } from "lucide-react";
 import yomIconBlue from "@/assets/yom-icon-blue.svg";
+import vanImage from "@/assets/van.png";
 
 const features = [
   "Asan mobil tətbiq sifarişi",
@@ -47,25 +48,12 @@ const About = () => {
           </div>
 
           <div className="relative animate-slide-up">
-            <div className="relative bg-gradient-primary rounded-3xl p-8 shadow-medium">
-              <div className="bg-primary-foreground rounded-2xl p-8">
-                <div className="space-y-6">
-                  <div className="text-center">
-                    <div className="text-5xl font-bold text-primary mb-2">500K+</div>
-                    <div className="text-muted-foreground">Xoşbəxt Müştəri</div>
-                  </div>
-                  <div className="h-px bg-border"></div>
-                  <div className="text-center">
-                    <div className="text-5xl font-bold text-primary mb-2">1M+</div>
-                    <div className="text-muted-foreground">Tamamlanmış Sifariş</div>
-                  </div>
-                  <div className="h-px bg-border"></div>
-                  <div className="text-center">
-                    <div className="text-5xl font-bold text-primary mb-2">50+</div>
-                    <div className="text-muted-foreground">Xidmət Olunan Şəhər</div>
-                  </div>
-                </div>
-              </div>
+            <div className="relative w-full h-full min-h-[400px] flex items-center justify-center">
+              <img
+                src={vanImage}
+                alt="YOM çatdırılma vanı"
+                className="w-full h-auto object-contain"
+              />
             </div>
           </div>
         </div>
