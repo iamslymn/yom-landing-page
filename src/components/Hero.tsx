@@ -118,7 +118,7 @@ const Hero = () => {
         />
       </div>
 
-      <div className="container mx-auto px-4 pt-8 pb-12 relative z-10">
+      <div className="container mx-auto px-4 pt-8 pb-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="text-primary-foreground animate-fade-in">
