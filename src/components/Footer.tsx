@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Linkedin, Instagram } from "lucide-react";
+import { Linkedin, Instagram } from "lucide-react";
 import yomLogoWhite from "@/assets/yom-logo-white.svg";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 
@@ -39,6 +39,26 @@ const Footer = () => {
             <p className="text-background/80 text-sm mb-4">
               Peşəkar camaşırxana və quru təmizləmə xidmətləri qapınıza çatdırılır.
             </p>
+            <div className="flex items-center gap-4 mt-4">
+              <a
+                href="https://www.linkedin.com/company/yom-laundry/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-background/80 hover:text-background transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-5 w-5" />
+              </a>
+              <a
+                href="https://www.instagram.com/yom.laundry/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-background/80 hover:text-background transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+            </div>
           </div>
 
           <div>
@@ -60,9 +80,9 @@ const Footer = () => {
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollToSection("faq")} className="hover:text-background transition-colors text-left">
+                <Link to="/contact" className="hover:text-background transition-colors">
                   Əlaqə
-                </button>
+                </Link>
               </li>
             </ul>
           </div>
@@ -73,60 +93,6 @@ const Footer = () => {
               <li><Link to="/privacy" className="hover:text-background transition-colors">Məxfilik Siyasəti</Link></li>
               <li><Link to="/terms" className="hover:text-background transition-colors">Xidmət Şərtləri</Link></li>
             </ul>
-          </div>
-        </div>
-
-        {/* Contact Information */}
-        <div className="border-t border-background/20 pt-8 mb-8">
-          <div className="grid md:grid-cols-2 gap-6">
-            <div>
-              <h3 className="font-semibold mb-4">Əlaqə Məlumatları</h3>
-              <ul className="space-y-3 text-sm text-background/80">
-                <li className="flex items-start gap-3">
-                  <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0" />
-                  <span>Azərbaycan, Bakı şəhəri, Əcəmi Naxçıvani 103, AZ1108</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <Phone className="h-5 w-5 flex-shrink-0" />
-                  <a href="tel:+994517155751" className="hover:text-background transition-colors">
-                    +994 51 715 57 51
-                  </a>
-                </li>
-                <li className="flex items-center gap-3">
-                  <Mail className="h-5 w-5 flex-shrink-0" />
-                  <a href="mailto:hello@yom.az" className="hover:text-background transition-colors">
-                    hello@yom.az
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4">Sosial Mediada YOM</h3>
-              <ul className="space-y-3 text-sm text-background/80">
-                <li>
-                  <a
-                    href="https://www.linkedin.com/company/yom-laundry/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 hover:text-background transition-colors"
-                  >
-                    <Linkedin className="h-5 w-5 flex-shrink-0" />
-                    <span>LinkedIn</span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.instagram.com/yom.laundry/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 hover:text-background transition-colors"
-                  >
-                    <Instagram className="h-5 w-5 flex-shrink-0" />
-                    <span>Instagram</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
 
