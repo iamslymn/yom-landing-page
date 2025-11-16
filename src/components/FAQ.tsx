@@ -28,13 +28,15 @@ const faqs = [
 
 const FAQ = () => {
   const scrollToContact = () => {
-    // This would scroll to contact page or open contact form
-    // For now, we'll just log it
-    console.log("Navigate to contact page");
+    // Scroll to FAQ section or could link to contact page
+    const element = document.getElementById("faq");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
-    <section className="py-20 bg-background">
+    <section id="faq" className="py-20 bg-blue-50 border-t border-border/20">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12 animate-fade-in">

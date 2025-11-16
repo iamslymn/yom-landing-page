@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 import yomLogoBlue from "@/assets/yom-logo-blue.svg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -14,12 +16,19 @@ const Navbar = () => {
     }
   };
 
+  const handleLogoClick = () => {
+    navigate("/");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <img src={yomLogoBlue} alt="Yom Logo" className="h-8" />
+            <button onClick={handleLogoClick} className="cursor-pointer">
+              <img src={yomLogoBlue} alt="Yom Logo" className="h-8" />
+            </button>
           </div>
 
           {/* Desktop Menu */}
@@ -36,13 +45,7 @@ const Navbar = () => {
             >
               Haqqımızda
             </button>
-            <button
-              onClick={() => scrollToSection("download")}
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              Yüklə
-            </button>
-            <Button onClick={() => scrollToSection("download")}>Başla</Button>
+            <Button onClick={() => scrollToSection("download")}>Yüklə</Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -70,14 +73,8 @@ const Navbar = () => {
             >
               Haqqımızda
             </button>
-            <button
-              onClick={() => scrollToSection("download")}
-              className="block w-full text-left py-2 text-foreground hover:text-primary transition-colors"
-            >
-              Yüklə
-            </button>
             <Button onClick={() => scrollToSection("download")} className="w-full">
-              Başla
+              Yüklə
             </Button>
           </div>
         )}

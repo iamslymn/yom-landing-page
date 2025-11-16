@@ -1,11 +1,12 @@
-import { Button } from "@/components/ui/button";
-import { Smartphone, QrCode } from "lucide-react";
+import { QrCode } from "lucide-react";
 import qrCodeImage from "@/assets/qr-code.png";
 import yomIconWhite from "@/assets/yom-icon-white.svg";
+import appStoreIcon from "@/assets/app_store.svg";
+import googlePlayIcon from "@/assets/google_play.svg";
 
 const Download = () => {
   return (
-    <section id="download" className="py-20 bg-gradient-hero relative overflow-hidden">
+    <section id="download" className="py-20 bg-gradient-hero relative overflow-hidden border-t border-primary/20">
       {/* Decorative Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 right-10 w-64 h-64 bg-primary-foreground rounded-full blur-3xl animate-float"></div>
@@ -24,7 +25,7 @@ const Download = () => {
             Mobil tətbiqimizi elə indi yükləyin və xidmətimizin rahatlığından dəqiqələr içində istifadə edin.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8">
             {/* QR Code */}
             <div className="flex flex-col items-center animate-slide-up">
               <div className="bg-primary-foreground rounded-2xl p-6 shadow-strong mb-4">
@@ -37,40 +38,23 @@ const Download = () => {
             </div>
 
             {/* Download Buttons */}
-            <div className="flex flex-col gap-4 animate-slide-up">
-              <Button
-                size="lg"
-                variant="secondary"
-                className="text-lg px-8 py-6 h-auto justify-start"
-                onClick={() => window.open("https://play.google.com/store", "_blank")}
+            <div className="flex flex-col gap-3 animate-slide-up items-center justify-center">
+              <a
+                href="https://play.google.com/store"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition-opacity"
               >
-                <div className="flex items-center gap-4">
-                  <div className="bg-foreground/10 p-3 rounded-xl">
-                    <Smartphone className="h-8 w-8" />
-                  </div>
-                  <div className="text-left">
-                    <div className="text-xs opacity-80">ƏLDƏ EDİN</div>
-                    <div className="text-xl font-bold">Google Play</div>
-                  </div>
-                </div>
-              </Button>
-
-              <Button
-                size="lg"
-                variant="secondary"
-                className="text-lg px-8 py-6 h-auto justify-start"
-                onClick={() => window.open("https://www.apple.com/app-store/", "_blank")}
+                <img src={googlePlayIcon} alt="Google Play" className="h-24 w-auto" />
+              </a>
+              <a
+                href="https://www.apple.com/app-store/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition-opacity"
               >
-                <div className="flex items-center gap-4">
-                  <div className="bg-foreground/10 p-3 rounded-xl">
-                    <Smartphone className="h-8 w-8" />
-                  </div>
-                  <div className="text-left">
-                    <div className="text-xs opacity-80">YÜKLƏYIN</div>
-                    <div className="text-xl font-bold">App Store</div>
-                  </div>
-                </div>
-              </Button>
+                <img src={appStoreIcon} alt="App Store" className="h-24 w-auto" />
+              </a>
             </div>
           </div>
 

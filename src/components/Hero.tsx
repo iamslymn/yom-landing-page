@@ -163,29 +163,18 @@ const Hero = () => {
                 Ətraflı Məlumat
               </Button>
             </div>
-            <div className="mt-8 flex items-center gap-4 text-primary-foreground/80">
-              <div className="flex items-center">
-                <span className="text-3xl font-bold text-secondary mr-2">24s</span>
-                <span className="text-sm">Sürətli Çatdırılma</span>
-              </div>
-              <div className="h-8 w-px bg-primary-foreground/30"></div>
-              <div className="flex items-center">
-                <span className="text-3xl font-bold text-secondary mr-2">100%</span>
-                <span className="text-sm">Məmnuniyyət</span>
-              </div>
-            </div>
           </div>
 
           {/* Hero Spline Animation */}
-          <div className="relative animate-slide-in-left hidden lg:block">
-             <div className="relative w-[700px] h-[700px] bg-transparent mx-auto">
+          <div className="relative animate-slide-in-left hidden lg:block pointer-events-none">
+             <div className="relative w-[700px] h-[700px] bg-transparent mx-auto pointer-events-none">
               <iframe
                 src="https://my.spline.design/animatedmockupiphone14pro-86XT7O8vVhSY8E6YOQ0GTEvU/"
                 frameBorder="0"
                 width="700"
                 height="700"
-                className="w-full h-full bg-transparent"
-                style={{ backgroundColor: 'transparent' }}
+                className="w-full h-full bg-transparent pointer-events-none"
+                style={{ backgroundColor: 'transparent', pointerEvents: 'none' }}
                 title="YOM Mobile App Preview"
               ></iframe>
             </div>
