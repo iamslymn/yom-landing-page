@@ -23,7 +23,7 @@ const steps = [
 
 const ThreeSteps = () => {
   return (
-    <section className="py-24 bg-slate-50 relative overflow-hidden border-t-2 border-border/30">
+    <section className="py-16 bg-slate-50 relative overflow-hidden border-t-2 border-border/30">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary rounded-full blur-3xl animate-float"></div>
@@ -32,11 +32,11 @@ const ThreeSteps = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
+        <div className="text-center mb-10 animate-fade-in">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-foreground leading-tight">
             Bu qədər rahatlıq cəmi 3 addımda
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-normal">
             Sifariş vermək heç vaxt bu qədər asan olmamışdı
           </p>
         </div>
@@ -53,27 +53,27 @@ const ThreeSteps = () => {
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
                   {/* Step Card */}
-                  <div className="relative h-full bg-background rounded-3xl p-8 border border-border/50 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 animate-bounce-in">
+                  <div className="relative h-full bg-background rounded-3xl p-6 border border-border/50 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 animate-bounce-in">
                     {/* Icon */}
-                    <div className="flex justify-center mb-6">
-                      <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-                        <IconComponent className="h-12 w-12 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+                    <div className="flex justify-center mb-4">
+                      <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                        <IconComponent className="h-10 w-10 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
                       </div>
                     </div>
 
                     {/* Step Number */}
-                    <div className="flex justify-center mb-4">
-                      <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center">
-                        <span className="text-lg font-bold text-secondary-foreground">{step.number}</span>
+                    <div className="flex justify-center mb-3">
+                      <div className="w-9 h-9 rounded-full bg-secondary flex items-center justify-center">
+                        <span className="text-base font-bold text-secondary-foreground">{step.number}</span>
                       </div>
                     </div>
 
                     {/* Content */}
-                    <div className="text-center space-y-4">
-                      <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+                    <div className="text-center space-y-3">
+                      <h3 className="text-xl md:text-2xl font-bold text-foreground leading-tight">
                         {step.title}
                       </h3>
-                      <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                      <p className="text-sm md:text-base text-muted-foreground leading-normal">
                         {step.description}
                       </p>
                     </div>

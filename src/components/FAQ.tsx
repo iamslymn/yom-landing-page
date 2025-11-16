@@ -36,11 +36,11 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="py-20 bg-blue-50 border-t-2 border-border/30">
+    <section id="faq" className="py-16 bg-blue-50 border-t-2 border-border/30">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+          <div className="text-center mb-10 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground leading-tight">
               Sualınız var? Biz buradayıq
             </h2>
             <Button
@@ -53,7 +53,7 @@ const FAQ = () => {
             </Button>
           </div>
 
-          <div className="mt-12">
+          <div className="mt-8">
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((faq, index) => (
                 <AccordionItem
@@ -64,7 +64,7 @@ const FAQ = () => {
                   <AccordionTrigger className="text-left text-lg font-semibold text-foreground hover:text-primary transition-colors">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground text-base leading-relaxed">
+                  <AccordionContent className="text-muted-foreground text-base leading-normal">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>

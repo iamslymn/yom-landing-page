@@ -21,10 +21,10 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-20 bg-blue-50 border-t-2 border-border/30">
+    <section id="services" className="py-16 bg-blue-50 border-t-2 border-border/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+        <div className="text-center mb-10 animate-fade-in">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground leading-tight">
             Xidmətlərimiz
           </h2>
         </div>
@@ -38,16 +38,16 @@ const Services = () => {
                 className="group hover:shadow-medium transition-all duration-300 hover:-translate-y-1 animate-slide-up border-border text-center"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <CardContent className="p-8">
-                  <div className="mb-6 flex justify-center">
-                    <div className="w-32 h-32 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-                      <IconComponent className="h-16 w-16 text-primary group-hover:text-primary-foreground transition-colors" />
+                <CardContent className="p-6">
+                  <div className="mb-4 flex justify-center">
+                    <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                      <IconComponent className="h-12 w-12 text-primary group-hover:text-primary-foreground transition-colors" />
                     </div>
                   </div>
-                  <h3 className="text-2xl font-bold mb-3 text-foreground">
+                  <h3 className="text-xl font-bold mb-3 text-foreground leading-tight">
                     {service.title}
                   </h3>
-                  <p className="text-muted-foreground text-lg">
+                  <p className="text-muted-foreground text-base leading-normal">
                     {service.slogan}
                   </p>
                 </CardContent>
