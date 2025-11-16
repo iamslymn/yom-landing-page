@@ -23,7 +23,7 @@ const steps = [
 
 const ThreeSteps = () => {
   return (
-    <section className="py-24 bg-blue-50 relative overflow-hidden border-t border-border/20">
+    <section className="py-24 bg-slate-50 relative overflow-hidden border-t-2 border-border/30">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary rounded-full blur-3xl animate-float"></div>

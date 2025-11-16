@@ -1,13 +1,31 @@
 import { MapPin, Phone, Mail, Linkedin, Instagram } from "lucide-react";
 import yomLogoWhite from "@/assets/yom-logo-white.svg";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const Footer = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleLogoClick = () => {
     navigate("/");
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const scrollToSection = (id: string) => {
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
   };
 
   return (
@@ -36,8 +54,16 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Şirkət</h3>
             <ul className="space-y-2 text-sm text-background/80">
-              <li><a href="#about" className="hover:text-background transition-colors">Haqqımızda</a></li>
-              <li><a href="#faq" className="hover:text-background transition-colors">Əlaqə</a></li>
+              <li>
+                <button onClick={() => scrollToSection("about")} className="hover:text-background transition-colors text-left">
+                  Haqqımızda
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollToSection("faq")} className="hover:text-background transition-colors text-left">
+                  Əlaqə
+                </button>
+              </li>
             </ul>
           </div>
 

@@ -6,7 +6,7 @@ import googlePlayIcon from "@/assets/google_play.svg";
 
 const Download = () => {
   return (
-    <section id="download" className="py-20 bg-gradient-hero relative overflow-hidden border-t border-primary/20">
+    <section id="download" className="py-20 bg-gradient-hero relative overflow-hidden border-t-2 border-primary/30">
       {/* Decorative Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 right-10 w-64 h-64 bg-primary-foreground rounded-full blur-3xl animate-float"></div>
