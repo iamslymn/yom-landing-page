@@ -3,7 +3,7 @@ import vanImage from "@/assets/van.png";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-blue-50 border-t-2 border-border/30">
+    <section id="about" className="py-20 bg-gray-50 border-t-2 border-border/30">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in">
