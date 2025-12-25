@@ -1,9 +1,0 @@
-RewriteEngine On
-
-# mövcud fayl/qovluğa toxunma
-RewriteCond %{REQUEST_FILENAME} -f [OR]
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^ - [L]
-
-# SPA routelarını index.html-ə göndər
-RewriteRule ^ index.html [L]
