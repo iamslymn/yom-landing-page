@@ -50,8 +50,8 @@ const ThreeSteps = () => {
                   <div className="relative h-full bg-background rounded-3xl p-6 border border-border/50 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 animate-bounce-in">
                     {/* Step Number */}
                     <div className="flex justify-center mb-6">
-                      <div className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center group-hover:scale-110 transition-all duration-300">
-                        <span className="text-2xl font-bold text-secondary-foreground">{step.number}</span>
+                      <div className="w-16 h-16 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300" style={{ backgroundColor: '#4ca8f8' }}>
+                        <span className="text-2xl font-bold text-white">{step.number}</span>
                       </div>
                     </div>
 
