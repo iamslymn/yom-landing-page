@@ -1,31 +1,34 @@
 import { Shirt, Droplet, Wind } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-
-const services = [
-  {
-    icon: Droplet,
-    title: "Quru təmizləmə",
-    slogan: "Etibarlı şəkildə, ilk günkü kimi.",
-  },
-  {
-    icon: Shirt,
-    title: "Yuma",
-    slogan: "Kiloqram ilə, xüsusi qayğı ilə.",
-  },
-  {
-    icon: Wind,
-    title: "Ütüləmə",
-    slogan: "Ən şık görünəcək vəziyyətdə.",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Services = () => {
+  const { t } = useLanguage();
+
+  const services = [
+    {
+      icon: Droplet,
+      title: t("services.dryCleaning.title"),
+      slogan: t("services.dryCleaning.slogan"),
+    },
+    {
+      icon: Shirt,
+      title: t("services.washing.title"),
+      slogan: t("services.washing.slogan"),
+    },
+    {
+      icon: Wind,
+      title: t("services.ironing.title"),
+      slogan: t("services.ironing.slogan"),
+    },
+  ];
+
   return (
     <section id="services" className="py-16 bg-blue-50 border-t-2 border-border/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground leading-tight">
-            Xidmətlərimiz
+            {t("services.title")}
           </h2>
         </div>
 

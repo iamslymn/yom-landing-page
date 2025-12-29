@@ -1,10 +1,12 @@
 import { Linkedin, Instagram } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import yomLogoWhite from "@/assets/yom-logo-white.svg";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const Footer = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const { t } = useLanguage();
 
   const handleLogoClick = () => {
     navigate("/");
@@ -37,7 +39,7 @@ const Footer = () => {
               <img src={yomLogoWhite} alt="Yom Logo" className="h-8 mb-4" />
             </button>
             <p className="text-background/80 text-sm mb-4">
-              Peşəkar camaşırxana və quru təmizləmə xidmətləri qapınıza çatdırılır.
+              {t("footer.description")}
             </p>
             <div className="flex items-center gap-4 mt-4">
               <a
@@ -62,42 +64,42 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Xidmətlər</h3>
+            <h3 className="font-semibold mb-4">{t("footer.services")}</h3>
             <ul className="space-y-2 text-sm text-background/80">
-              <li><a href="#services" className="hover:text-background transition-colors">Camaşırxana</a></li>
-              <li><a href="#services" className="hover:text-background transition-colors">Quru Təmizləmə</a></li>
-              <li><a href="#services" className="hover:text-background transition-colors">Ekspress Xidmət</a></li>
-              <li><a href="#services" className="hover:text-background transition-colors">Planlaşdırılmış Götürmə</a></li>
+              <li><a href="#services" className="hover:text-background transition-colors">{t("footer.laundry")}</a></li>
+              <li><a href="#services" className="hover:text-background transition-colors">{t("footer.dryCleaning")}</a></li>
+              <li><a href="#services" className="hover:text-background transition-colors">{t("footer.express")}</a></li>
+              <li><a href="#services" className="hover:text-background transition-colors">{t("footer.scheduled")}</a></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Şirkət</h3>
+            <h3 className="font-semibold mb-4">{t("footer.company")}</h3>
             <ul className="space-y-2 text-sm text-background/80">
               <li>
                 <button onClick={() => scrollToSection("about")} className="hover:text-background transition-colors text-left">
-                  Haqqımızda
+                  {t("footer.about")}
                 </button>
               </li>
               <li>
                 <Link to="/contact" className="hover:text-background transition-colors">
-                  Əlaqə
+                  {t("footer.contact")}
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Hüquqi</h3>
+            <h3 className="font-semibold mb-4">{t("footer.legal")}</h3>
             <ul className="space-y-2 text-sm text-background/80">
-              <li><Link to="/privacy" className="hover:text-background transition-colors">Məxfilik Siyasəti</Link></li>
-              <li><Link to="/terms" className="hover:text-background transition-colors">Xidmət Şərtləri</Link></li>
+              <li><Link to="/privacy" className="hover:text-background transition-colors">{t("footer.privacy")}</Link></li>
+              <li><Link to="/terms" className="hover:text-background transition-colors">{t("footer.terms")}</Link></li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-background/20 pt-8 text-center text-sm text-background/60">
-          <p>&copy; {new Date().getFullYear()} Yom. Bütün hüquqlar qorunur.</p>
+          <p>&copy; {new Date().getFullYear()} Yom. {t("footer.rights")}</p>
         </div>
       </div>
     </footer>

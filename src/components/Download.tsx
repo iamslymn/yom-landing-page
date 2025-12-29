@@ -1,10 +1,13 @@
 import { QrCode } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import qrCodeImage from "@/assets/qr-code.png";
 import yomIconWhite from "@/assets/yom-icon-white.svg";
 import appStoreIcon from "@/assets/app_store.svg";
 import googlePlayIcon from "@/assets/google_play.svg";
 
 const Download = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="download" className="py-16 bg-gradient-hero relative overflow-hidden border-t-2 border-primary/30">
       {/* Decorative Elements */}
@@ -19,21 +22,21 @@ const Download = () => {
             <img src={yomIconWhite} alt="Yom Icon" className="h-16 w-16" />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in leading-tight">
-            Təmiz paltarlarınız bir toxunuş qədər uzaqda
+            {t("download.title")}
           </h2>
           <p className="text-lg md:text-xl mb-8 text-primary-foreground/90 animate-fade-in leading-normal">
-            Mobil tətbiqimizi elə indi yükləyin və xidmətimizin rahatlığından dəqiqələr içində istifadə edin.
+            {t("download.description")}
           </p>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
             {/* QR Code */}
             <div className="flex flex-col items-center animate-slide-up">
               <div className="bg-primary-foreground rounded-2xl p-4 shadow-strong mb-3">
-                <img src={qrCodeImage} alt="Yom tətbiqini yükləmək üçün QR kodu" className="w-40 h-40" />
+                <img src={qrCodeImage} alt="QR code to download Yom app" className="w-40 h-40" />
               </div>
               <div className="flex items-center gap-2 text-primary-foreground/90">
                 <QrCode className="h-5 w-5" />
-                <span className="text-sm">Yükləmək üçün skan edin</span>
+                <span className="text-sm">{t("download.scanToDownload")}</span>
               </div>
             </div>
 

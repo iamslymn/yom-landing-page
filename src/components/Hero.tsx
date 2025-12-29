@@ -1,10 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Download, Smartphone, Truck, Headphones, Bell } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import twinkl1 from "@/assets/twinkl1.png";
 import twinkl2 from "@/assets/twinkl2.png";
 import heroImage from "@/assets/hero-image1.png";
 
 const Hero = () => {
+  const { t } = useLanguage();
+
   const scrollToDownload = () => {
     const element = document.getElementById("download");
     if (element) {
@@ -124,24 +127,24 @@ const Hero = () => {
           {/* Text Content */}
           <div className="text-primary-foreground animate-fade-in">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-5 leading-tight">
-              Çamaşırxana ehtiyaclarınızı həll etməyin ən asan yolu.
+              {t("hero.title")}
             </h1>
             <p className="text-lg md:text-xl mb-5 text-primary-foreground/90 leading-normal">
-              Paltarlarınızı sizdən götürür, təmizləyib və çatdırırıq. Rahatınızda qalın və ürəyiniz istədiyiniz zaman mobil tətbiq üzərindən sifariş edin.
+              {t("hero.description")}
             </p>
             {/* Icon-text items */}
             <div className="flex flex-wrap gap-4 mb-6 text-primary-foreground/90">
               <div className="flex items-center gap-2">
                 <Truck className="h-5 w-5 text-secondary" />
-                <span className="text-sm">Ünvandan götürülmə və çatdırılma</span>
+                <span className="text-sm">{t("hero.pickup")}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Headphones className="h-5 w-5 text-secondary" />
-                <span className="text-sm">24/7 müştəri xidməti</span>
+                <span className="text-sm">{t("hero.support")}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Bell className="h-5 w-5 text-secondary" />
-                <span className="text-sm">Canlı statuslar</span>
+                <span className="text-sm">{t("hero.status")}</span>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -152,7 +155,7 @@ const Hero = () => {
                 className="text-lg px-8"
               >
                 <Download className="mr-2 h-5 w-5" />
-                Tətbiqi Yüklə
+                {t("hero.downloadApp")}
               </Button>
               <Button
                 size="lg"
@@ -161,7 +164,7 @@ const Hero = () => {
                 className="text-lg px-8 bg-primary-foreground/10 hover:bg-primary-foreground/20 text-primary-foreground border-primary-foreground/30"
               >
                 <Smartphone className="mr-2 h-5 w-5" />
-                Ətraflı Məlumat
+                {t("hero.moreInfo")}
               </Button>
             </div>
           </div>

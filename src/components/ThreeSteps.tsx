@@ -1,22 +1,26 @@
-const steps = [
-  {
-    number: "1",
-    title: "Tətbiqdən şifarişinizi edin",
-    description: "Gününüzü rahat planlayın, götürülmə və çatdırılma tarixini özünüz seçin.",
-  },
-  {
-    number: "2",
-    title: "Kuryeri gözləyin",
-    description: "Siz qeyd etdiyiniz vaxtda kuryer qapınızda olacaqdır. Paltarlarınızı paketləyib sizdən təhvil alacağıq.",
-  },
-  {
-    number: "3",
-    title: "Rahatınızda qalın və çatdırılmanı gözləyin",
-    description: "Paltarlarınızı təmizlədikdən sonra sifariş etdiyiniz qaydada, göstərdiyiniz tarixdə geri gətirəcəyik.",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const ThreeSteps = () => {
+  const { t } = useLanguage();
+
+  const steps = [
+    {
+      number: "1",
+      title: t("steps.step1.title"),
+      description: t("steps.step1.description"),
+    },
+    {
+      number: "2",
+      title: t("steps.step2.title"),
+      description: t("steps.step2.description"),
+    },
+    {
+      number: "3",
+      title: t("steps.step3.title"),
+      description: t("steps.step3.description"),
+    },
+  ];
+
   return (
     <section className="py-16 bg-slate-50 relative overflow-hidden border-t-2 border-border/30">
       {/* Decorative Background Elements */}
@@ -29,10 +33,10 @@ const ThreeSteps = () => {
         {/* Header */}
         <div className="text-center mb-10 animate-fade-in">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-foreground leading-tight">
-            Bu qədər rahatlıq cəmi 3 addımda
+            {t("steps.title")}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-normal">
-            Sifariş vermək heç vaxt bu qədər asan olmamışdı
+            {t("steps.subtitle")}
           </p>
         </div>
 

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import {
   Accordion,
   AccordionContent,
@@ -7,28 +8,29 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const faqs = [
-  {
-    question: "Hansı bölgələrdə xidmət göstərirsiniz?",
-    answer: "Hazırda sadəcə Bakı şəhərinin mərkəz ərazilərində xidmət göstəririk. Yaxın gələcəkdə isə durmadan böyüyərək Azərbaycanın bütün bölgələrinə xidmət göstərməyi hədəfləyirik.",
-  },
-  {
-    question: "Kuryerlər hansı aralıqda işləyirlər?",
-    answer: "Əlbəttə ki sizə ən uyğun vaxtda. Bu seçimi tam siz edirsiniz. Mobil tətbiqdə təhvil alma və təslim vaxtlarını seçin, gerisini isə bizə buraxın.",
-  },
-  {
-    question: "Ödənişləri necə edə bilərəm?",
-    answer: "Ödənişinizi tam onlayn ödəyə bilərsiniz. Hazırda, nəğd ödənişləri təəssüf ki qəbul etmirik.",
-  },
-  {
-    question: "Sifarişimi dəyişdirə və ya ləğv edə bilərəm?",
-    answer: "Əlbəttə. Bunu bizim müştəri xidmətlərinə bildirməyiniz yetərli olacaqdır.",
-  },
-];
-
 const FAQ = () => {
+  const { t } = useLanguage();
+
+  const faqs = [
+    {
+      question: t("faq.q1"),
+      answer: t("faq.a1"),
+    },
+    {
+      question: t("faq.q2"),
+      answer: t("faq.a2"),
+    },
+    {
+      question: t("faq.q3"),
+      answer: t("faq.a3"),
+    },
+    {
+      question: t("faq.q4"),
+      answer: t("faq.a4"),
+    },
+  ];
+
   const scrollToContact = () => {
-    // Scroll to FAQ section or could link to contact page
     const element = document.getElementById("faq");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -41,7 +43,7 @@ const FAQ = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-10 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground leading-tight">
-              Sualınız var? Biz buradayıq
+              {t("faq.title")}
             </h2>
             <Button
               size="lg"
@@ -49,7 +51,7 @@ const FAQ = () => {
               className="text-lg px-8"
             >
               <MessageCircle className="mr-2 h-5 w-5" />
-              Sualınızı bizdən soruşun
+              {t("faq.button")}
             </Button>
           </div>
 
@@ -78,4 +80,3 @@ const FAQ = () => {
 };
 
 export default FAQ;
-
