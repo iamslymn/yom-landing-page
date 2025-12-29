@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { useNavigate, Link, useLocation } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import yomLogoBlue from "@/assets/yom-logo-blue.svg";
+import flagAz from "@/assets/flag-az.svg";
+import flagEn from "@/assets/flag-en.svg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -78,26 +80,30 @@ const Navbar = () => {
                 onClick={() => setLangDropdownOpen(!langDropdownOpen)}
                 className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-muted transition-colors"
               >
-                <span className="text-lg">{language === "az" ? "🇦🇿" : "🇬🇧"}</span>
+                <img 
+                  src={language === "az" ? flagAz : flagEn} 
+                  alt={language === "az" ? "Azerbaijan" : "English"} 
+                  className="w-6 h-4 object-cover rounded-sm"
+                />
                 <span className="text-sm font-medium">{language.toUpperCase()}</span>
                 <ChevronDown className={`h-4 w-4 transition-transform ${langDropdownOpen ? "rotate-180" : ""}`} />
               </button>
               
               {langDropdownOpen && (
-                <div className="absolute right-0 mt-2 w-32 bg-background border border-border rounded-lg shadow-lg overflow-hidden z-50">
+                <div className="absolute right-0 mt-2 w-24 bg-background border border-border rounded-lg shadow-lg overflow-hidden z-50">
                   <button
                     onClick={() => toggleLanguage("az")}
                     className={`w-full flex items-center gap-3 px-4 py-3 hover:bg-muted transition-colors ${language === "az" ? "bg-muted" : ""}`}
                   >
-                    <span className="text-lg">🇦🇿</span>
-                    <span className="text-sm font-medium">Azərbaycan</span>
+                    <img src={flagAz} alt="Azerbaijan" className="w-6 h-4 object-cover rounded-sm" />
+                    <span className="text-sm font-medium">AZ</span>
                   </button>
                   <button
                     onClick={() => toggleLanguage("en")}
                     className={`w-full flex items-center gap-3 px-4 py-3 hover:bg-muted transition-colors ${language === "en" ? "bg-muted" : ""}`}
                   >
-                    <span className="text-lg">🇬🇧</span>
-                    <span className="text-sm font-medium">English</span>
+                    <img src={flagEn} alt="English" className="w-6 h-4 object-cover rounded-sm" />
+                    <span className="text-sm font-medium">EN</span>
                   </button>
                 </div>
               )}
@@ -112,24 +118,28 @@ const Navbar = () => {
                 onClick={() => setLangDropdownOpen(!langDropdownOpen)}
                 className="flex items-center gap-1 px-2 py-1.5 rounded-lg hover:bg-muted transition-colors"
               >
-                <span className="text-lg">{language === "az" ? "🇦🇿" : "🇬🇧"}</span>
+                <img 
+                  src={language === "az" ? flagAz : flagEn} 
+                  alt={language === "az" ? "Azerbaijan" : "English"} 
+                  className="w-6 h-4 object-cover rounded-sm"
+                />
                 <ChevronDown className={`h-3 w-3 transition-transform ${langDropdownOpen ? "rotate-180" : ""}`} />
               </button>
               
               {langDropdownOpen && (
-                <div className="absolute right-0 mt-2 w-32 bg-background border border-border rounded-lg shadow-lg overflow-hidden z-50">
+                <div className="absolute right-0 mt-2 w-24 bg-background border border-border rounded-lg shadow-lg overflow-hidden z-50">
                   <button
                     onClick={() => toggleLanguage("az")}
                     className={`w-full flex items-center gap-3 px-4 py-3 hover:bg-muted transition-colors ${language === "az" ? "bg-muted" : ""}`}
                   >
-                    <span className="text-lg">🇦🇿</span>
+                    <img src={flagAz} alt="Azerbaijan" className="w-6 h-4 object-cover rounded-sm" />
                     <span className="text-sm font-medium">AZ</span>
                   </button>
                   <button
                     onClick={() => toggleLanguage("en")}
                     className={`w-full flex items-center gap-3 px-4 py-3 hover:bg-muted transition-colors ${language === "en" ? "bg-muted" : ""}`}
                   >
-                    <span className="text-lg">🇬🇧</span>
+                    <img src={flagEn} alt="English" className="w-6 h-4 object-cover rounded-sm" />
                     <span className="text-sm font-medium">EN</span>
                   </button>
                 </div>
