@@ -1,19 +1,30 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link, useLocation } from "react-router-dom";
 import yomLogoBlue from "@/assets/yom-logo-blue.svg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsOpen(false);
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     }
+    setIsOpen(false);
   };
 
   const handleLogoClick = () => {
@@ -45,6 +56,12 @@ const Navbar = () => {
             >
               Haqqımızda
             </button>
+            <Link
+              to="/contact"
+              className="text-foreground hover:text-primary transition-colors"
+            >
+              Əlaqə
+            </Link>
             <Button onClick={() => scrollToSection("download")}>Yüklə</Button>
           </div>
 
@@ -73,6 +90,13 @@ const Navbar = () => {
             >
               Haqqımızda
             </button>
+            <Link
+              to="/contact"
+              onClick={() => setIsOpen(false)}
+              className="block w-full text-left py-2 text-foreground hover:text-primary transition-colors"
+            >
+              Əlaqə
+            </Link>
             <Button onClick={() => scrollToSection("download")} className="w-full">
               Yüklə
             </Button>
