@@ -1,6 +1,6 @@
 import { QrCode } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import qrCodeImage from "@/assets/qr-code.png";
+import qrCodeImage from "@/assets/yom-app-stores.svg";
 import yomIconWhite from "@/assets/yom-icon-white.svg";
 import appStoreIcon from "@/assets/app_store.svg";
 import googlePlayIcon from "@/assets/google_play.svg";
@@ -31,8 +31,8 @@ const Download = () => {
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
             {/* QR Code */}
             <div className="flex flex-col items-center animate-slide-up">
-              <div className="bg-primary-foreground rounded-2xl p-4 shadow-strong mb-3">
-                <img src={qrCodeImage} alt="QR code to download Yom app" className="w-40 h-40" />
+              <div className="bg-primary-foreground rounded-2xl shadow-strong mb-3 w-44 h-44 flex items-center justify-center">
+                <img src={qrCodeImage} alt="QR code to download Yom app" className="w-36 h-36" />
               </div>
               <div className="flex items-center gap-2 text-primary-foreground/90">
                 <QrCode className="h-5 w-5" />
@@ -43,7 +43,7 @@ const Download = () => {
             {/* Download Buttons */}
             <div className="flex flex-col gap-3 animate-slide-up items-center justify-center">
               <a
-                href="https://play.google.com/store/apps/details?id=az.yom.app"
+                href="https://relink.is/yom"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-80 transition-opacity"
@@ -51,7 +51,7 @@ const Download = () => {
                 <img src={googlePlayIcon} alt="Google Play" className="h-20 w-auto" />
               </a>
               <a
-                href="https://apps.apple.com/us/app/yom-laundry/id6756739043"
+                href="https://relink.is/yom"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-80 transition-opacity"
