@@ -43,7 +43,7 @@ const Download = () => {
             {/* Download Buttons */}
             <div className="flex flex-col gap-3 animate-slide-up items-center justify-center">
               <a
-                href="https://relink.is/yom"
+                href="https://play.google.com/store/apps/details?id=az.yom.app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-80 transition-opacity"
@@ -51,7 +51,7 @@ const Download = () => {
                 <img src={googlePlayIcon} alt="Google Play" className="h-20 w-auto" />
               </a>
               <a
-                href="https://relink.is/yom"
+                href="https://apps.apple.com/az/app/yom-laundry/id6756739043"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-80 transition-opacity"
